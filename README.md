@@ -3,7 +3,7 @@ Official code for "Pathology-and-genomics Multimodal Transformer for Survival Ou
 
 Thanks for your patience! We will release our code on October 8th, 2023 (i.e., when MICCIA2023 is held in Vancouver, Canada).
 
-<!-- <b> arXiv preprint version <b> [Link](https://arxiv.org/pdf/2304.08485.pdf) -->
+<b> arXiv preprint version <b> [Link](http://arxiv.org/abs/2307.11952)
 
 ### Workflow overview of the PathOmics.
 <p align="center">
