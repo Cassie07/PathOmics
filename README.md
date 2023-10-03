@@ -38,7 +38,7 @@ h5py 2.8.0
 ## Usage
 ### Data prerpocessing
 ```
-1. Download TCGA-COAD and TCGA-READ.
+1. Download WSIs from TCGA-COAD and TCGA-READ.
 2. Download genomics data from CbioPortal and move the downloaded folder into "PathOmics" folder.
 * "coadread_tcga_pan_can_atlas_2018" in `bash_main.py` and `bash_main_read.py` is the downloaded folder, please download it before you run the code.
 3. Split WSIs into patches and only keep the foreground patches.
