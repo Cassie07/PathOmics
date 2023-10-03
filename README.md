@@ -38,11 +38,12 @@ h5py 2.8.0
 ## Usage
 ### Data prerpocessing
 ```
-1. Split WSIs into patches and only keep the foreground patches.
-2. Extract patch features via pretrained models (e.g., ImageNet-pretrained ResNet101). For more details, please check the code in split_tiles_utils/helper.py
-3. Save patch features as .npz files. (For each slide, we generate one .npz file to save patch features).
-4. Download genomics data from CbioPortal and move the downloaded folder into "PathOmics" folder.
+1. Download TCGA-COAD and TCGA-READ.
+2. Download genomics data from CbioPortal and move the downloaded folder into "PathOmics" folder.
 * "coadread_tcga_pan_can_atlas_2018" in `bash_main.py` and `bash_main_read.py` is the downloaded folder, please download it before you run the code.
+3. Split WSIs into patches and only keep the foreground patches.
+4. Extract patch features via pretrained models (e.g., ImageNet-pretrained ResNet101). For more details, please check the code in split_tiles_utils/helper.py
+5. Save patch features as .npz files. (For each slide, we generate one .npz file to save patch features).
 ```
 
 ### Run code on TCGA-COAD only
