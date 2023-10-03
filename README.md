@@ -15,7 +15,7 @@ Poster Hall
 ```
 <b> arXiv preprint version </b> [Link](http://arxiv.org/abs/2307.11952)
 
-## Workflow overview of the PathOmics.
+## Workflow overview of the PathOmics
 <p align="center">
   <img src="https://github.com/Cassie07/PathOmics/blob/main/Figures/Figure1.png" width="674.1" height="368.3" title="Figure1">
 </p>
