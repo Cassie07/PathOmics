@@ -61,7 +61,7 @@ python bash_main_read.py --k_fold 5 --fusion_mode 'concat' --prev_fusion_mode 'c
 If you want to use TCGA-COAD pretrain weights and skip the pretraining stage, please add `--load_model_finetune` into your script.
 Please modify the code to ensure your pretrain weights saving directory is correct.
 
-### Use data-efficient mode finetuning stage
+### Use data-efficient mode in finetuning stage
 Please add `--less_data` into your script and set `--finetune_test_ratio` as your preferred ratio for indicating the ratio of data used for model finetuning.
 
 
