@@ -39,25 +39,7 @@ def train_and_evaluate(fold, epochs, model, loader_list, optimizer, loss_fn, reg
         
     for epoch in range(epochs):
         print()
-#         if model_mode == 'pretrain':
-#             train_loss = train_loop(model, train_loader, optimizer, loss_fn, reg_fn, device, epoch, lambda_reg=lambda_reg, gc = gc, model_mode = model_mode)
-#         else:
-#             train_loss_surv, train_loss, train_c_index = train_loop(model, train_loader, optimizer, loss_fn, reg_fn, device, epoch, lambda_reg=0., gc = 16, model_mode = model_mode)
-        
-#         if fold_mode == 'train_val_test':
-#             if model_mode == 'pretrain':
-#                 val_loss_surv, val_loss, val_c_index = test_loop(model, val_loader, loss_fn, reg_fn, device, epoch, lambda_reg=lambda_reg, gc = gc, model_mode = 'Test')
-#                 print('Epoch: {}, train_loss: {:.4f}, val_loss: {:.4f}'.format(epoch, train_loss, val_loss))
-#                 logs['train_loss'].append(train_loss)
-#                 logs['val_loss'].append(val_loss)
-#             else:    
-#                 val_loss_surv, val_loss, val_c_index = test_loop(model, val_loader, loss_fn, reg_fn, device, epoch, lambda_reg=lambda_reg, gc = gc, model_mode = 'Test')
-#                 print('Epoch: {}, train_loss: {:.4f}, train_c_index: {:.4f}, val_loss: {:.4f}, val_c_index: {:.4f}'.format(epoch, train_loss, train_c_index, val_loss, val_c_index))
-#                 logs['train_loss'].append(train_loss)
-#                 logs['train_c_index'].append(train_c_index)
-#                 logs['val_loss'].append(val_loss)
-#                 logs['val_c_index'].append(val_c_index)
-#         else:
+
         if model_mode == 'pretrain':
             train_loss = train_loop(model, train_loader, optimizer, loss_fn, reg_fn, device, epoch, lambda_reg=lambda_reg, gc = gc, model_mode = model_mode)
             print('Epoch: {}, train_loss: {:.4f}'.format(epoch, train_loss))
@@ -132,76 +114,7 @@ def train_and_evaluate(fold, epochs, model, loader_list, optimizer, loss_fn, reg
         return logs, best_pretrain_model
     else:
         return logs, best_test_c_index, best_epoch
-        
-#         if fold_mode == 'train_val_test' or fold_mode == 'k_fold':
-#             if model_mode == 'pretrain':
-#                 test_loss = test_loop(model, test_loader, loss_fn, reg_fn, device, epoch, lambda_reg=lambda_reg, gc = gc, model_mode = model_mode)
-#                 if abs(test_loss) < abs(prev_test_loss):
-#                     print('Epoch: {}, test_loss: {:.4f}'.format(epoch, test_loss))
-#                     prev_test_loss = test_loss
-#                     best_epoch = epoch
-#                     best_pretrain_model = model
-#                     print("Save a new model")
-#                     if save_model:
-#                         torch.save({
-#                 'epoch': epoch,
-#                 'model_state_dict': model.state_dict(),
-#                 }, save_path + '/' + 'fold_{}_model_{}.pt'.format(fold, epoch))
-#                     logs['test_loss'].append(test_loss)
-#                 else:
-#                     logs['test_loss'].append(0)
 
-#             else:
-
-#                 if not seperate_test_mode:
-#                     test_loss_surv, test_loss, test_c_index = test_loop(model, test_loader, loss_fn, reg_fn, device, epoch, lambda_reg=lambda_reg, gc = gc, model_mode = model_mode)
-#                     if test_c_index > best_test_c_index:
-#                         print('Epoch: {}, test_loss_surv: {:.4f}, test_c_index: {:.4f}'.format(epoch, test_loss, test_c_index))
-#                         best_test_c_index = test_c_index
-#                         best_epoch = epoch
-#                         print("Save a new model")
-#                         if save_model:
-#                             torch.save({
-#                     'epoch': epoch,
-#                     'model_state_dict': model.state_dict(),
-#                     }, save_path + '/' + 'fold_{}_finetune_model_{}.pt'.format(fold, epoch))
-#                         logs['test_loss'].append(test_loss)
-#                         logs['test_c_index'].append(test_c_index)
-#                     else:
-#                         logs['test_loss'].append(0)
-#                         logs['test_c_index'].append(0)
-#                 else:
-#                     val_loss_surv, val_loss, val_c_index = test_loop(model, val_loader, loss_fn, reg_fn, device, epoch, lambda_reg=lambda_reg, gc = gc, model_mode = model_mode)
-#                     if val_c_index > best_val_c_index:
-#                         print('Epoch: {}, val_loss_surv: {:.4f}, val_c_index: {:.4f}'.format(epoch, val_loss, val_c_index))
-
-#                         if test_c_index > best_test_c_index:
-#                             print('Epoch: {}, test_loss_surv: {:.4f}, test_c_index: {:.4f}'.format(epoch, test_loss, test_c_index))
-#                             best_test_c_index = test_c_index
-#                             best_epoch = epoch
-#                             print("Save a new model")
-#                             if save_model:
-#                                 torch.save({
-#                         'epoch': epoch,
-#                         'model_state_dict': model.state_dict(),
-#                         }, save_path + '/' + 'fold_{}_finetune_model_{}.pt'.format(fold, epoch))
-#                             logs['test_loss'].append(test_loss)
-#                             logs['test_c_index'].append(test_c_index)
-#                     else:
-#                         logs['test_loss'].append(0)
-#                         logs['test_c_index'].append(0)
-
-#         else:
-#             if model_mode == 'pretrain':
-#                 logs['test_loss'].append(0)
-#             else:
-#                 logs['test_loss'].append(0)
-#                 logs['test_c_index'].append(0)
-                
-#     if model_mode == 'pretrain':
-#         return logs, best_pretrain_model
-#     else:
-#         return logs, best_test_c_index, best_epoch
             
 def train_loop(model, loader, optimizer, loss_fn, reg_fn, device, epoch, lambda_reg=1e-4, gc = 16, model_mode = 'pretrain'):
     
@@ -223,15 +136,16 @@ def train_loop(model, loader, optimizer, loss_fn, reg_fn, device, epoch, lambda_
         target = torch.tensor([1])
         target = target.to(device)
         
-        try:
-            f = open('/home/kding1/projects/2023_PathOmics/Upload_to_server/TCGA_COAD/feature_cluster_record/cluster_1024.json')
-            cluster_record = json.load(f)
-            patient_cluster = cluster_record[patient_id[0]]
-        except:
-            f = open('/home/kding1/projects/2023_PathOmics/Upload_to_server/TCGA_READ/feature_cluster_record/cluster_1024.json')
-            cluster_record = json.load(f)
-            patient_cluster = cluster_record[patient_id[0]]
+        # try:
+        #     f = open('/home/kding1/projects/2023_PathOmics/Upload_to_server/TCGA_COAD/feature_cluster_record/cluster_1024.json')
+        #     cluster_record = json.load(f)
+        #     patient_cluster = cluster_record[patient_id[0]]
+        # except:
+        #     f = open('/home/kding1/projects/2023_PathOmics/Upload_to_server/TCGA_READ/feature_cluster_record/cluster_1024.json')
+        #     cluster_record = json.load(f)
+        #     patient_cluster = cluster_record[patient_id[0]]
 
+        patient_cluster = []
         if model_mode == 'pretrain':
             path_embedding, omic_embedding = model(x_path=data_WSI, x_omic=data_omic, x_cluster = patient_cluster, mode = model_mode)
 #             loss_path = loss_fn(path_embedding,target)
