@@ -112,14 +112,6 @@ class PathOmics_Surv(nn.Module):
         self.MHA = nn.MultiheadAttention(size[2], 8)
         self.mutiheadattention_networks = nn.ModuleList([self.MHA for i in range(len(omic_sizes))])
         
-#         hidden = self.size_dict_omic[model_size_omic]
-#         self.omics_dimReduction_networks = []
-#         for input_dim in omic_sizes:
-#             fc_omic = [DimReduction(input_dim, hidden[0])]
-#             for i, _ in enumerate(hidden[1:]):
-#                 fc_omic.append(DimReduction(hidden[i], hidden[i+1]))
-#             self.omics_dimReduction_networks.append(nn.Sequential(*fc_omic))
-#         self.omics_dimReduction_networks = nn.ModuleList(self.omics_dimReduction_networks)
 
     
     def forward(self, x_path, x_omic, x_cluster, mode = 'pretrain'):
@@ -174,32 +166,11 @@ class PathOmics_Surv(nn.Module):
             h_omic = [self.sig_networks[idx].forward(sig_feat) for idx, sig_feat in enumerate(x_omic)] ### each omic signature goes through it's own FC layer
         h_omic_bag = torch.stack(h_omic)### numGroup x 256
 
-#         h_path_bag = self.wsi_net(x_path).unsqueeze(1) ### path embeddings are fed through a FC layer
-#         h_omic = [self.sig_networks[idx].forward(sig_feat) for idx, sig_feat in enumerate(x_omic)] ### each omic signature goes through it's own FC layer
-#         h_omic_bag = torch.stack(h_omic)
-        
-        h_path_trans = self.path_transformer(h_path_bag)
-        h_omic_trans = self.omic_transformer(h_omic_bag)
-        
-        '''
-        # Original MCAT
-        h_omic_bag = torch.stack(h_omic).unsqueeze(1) ### omic embeddings are stacked (to be used in co-attention)
-        ### Genomic-Guided Co-Attention
-#         print("*** 2. Genomic-Guided Co-Attention ***")
-        h_path_coattn, A_coattn = self.coattn(h_omic_bag, h_path_bag, h_path_bag)
-        
-        ### Set-Based MIL Transformers
-#         print("*** 3. Set-based MIL Transformers ***")
-        h_path_trans = self.path_transformer(h_path_coattn)
-        h_omic_trans = self.omic_transformer(h_omic_bag)
 
+        
         h_path_trans = self.path_transformer(h_path_bag)
         h_omic_trans = self.omic_transformer(h_omic_bag)
-#         print("H_coattn after Transformers:\n", h_path_trans.shape)
-#         print("G_bag after Transformers:\n", h_omic_trans.shape)
-#         print('- Note that attention is permutation-equivariant, so dimensions are the same')        
-#         print()
-        '''        
+           
         ### Global Attention Pooling
 #         print("*** 4. Global Attention Pooling ***")
         
@@ -237,34 +208,10 @@ class PathOmics_Surv(nn.Module):
 #         print()
         
         if mode == 'pretrain':
-#             h_path = h_path_trans
-#             h_omic = h_omic_trans
-#             logit_scale = self.logit_scale.exp()
-#             path_embedding = self.path_proj(h_path).unsqueeze(0)
-#             omic_embedding = self.omic_proj(h_omic).unsqueeze(0)
-#             path_embedding = h_path.unsqueeze(0)
-#             omic_embedding = h_omic.unsqueeze(0)
             return h_path, h_omic #path_embedding, omic_embedding
-#             path_embedding = path_embedding / path_embedding.norm(dim=-1, keepdim=True)
-#             omic_embedding = omic_embedding / omic_embedding.norm(dim=-1, keepdim=True)
-            
-#             return logit_scale*path_embedding, logit_scale*omic_embedding
-        else:
-            ### Global Attention Pooling
-    #         print("*** 4. Global Attention Pooling ***")
-#             A_path, h_path = self.path_attention_head(h_path_trans.squeeze(1))
-#             A_path = torch.transpose(A_path, 1, 0)
-#             h_path = torch.mm(F.softmax(A_path, dim=1) , h_path)
-#             h_path = self.path_rho(h_path).squeeze()
-#     #         print("Final WSI-Level Representation (h^L):\n", h_path.shape)
 
-#             A_omic, h_omic = self.omic_attention_head(h_omic_trans.squeeze(1))
-#             A_omic = torch.transpose(A_omic, 1, 0)
-#             h_omic = torch.mm(F.softmax(A_omic, dim=1) , h_omic)
-#             h_omic = self.omic_rho(h_omic).squeeze()
-        
-            ### Late Fusion
-#             print("*** 5. Late Fusion ***")
+        else:
+
             if self.fusion == 'bilinear':
                 h = self.mm(h_path.unsqueeze(dim=0), h_omic.unsqueeze(dim=0)).squeeze()
             elif self.fusion == 'concat':
@@ -273,9 +220,6 @@ class PathOmics_Surv(nn.Module):
                 h = h_path.squeeze()
             elif self.fusion == 'omics':
                 h = h_omic.squeeze()
-
-#             print("Final shared representation (h_final):\n", h.shape)
-#             print()
 
             ### Survival Layer
             logits = self.classifier(h).unsqueeze(0)
