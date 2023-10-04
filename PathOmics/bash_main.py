@@ -130,19 +130,14 @@ def main():
     print()
     # patient_id_list = ['TCGA-F4-6461']
     patient_id_list = get_overlapped_patient(params.feature_folder, params.clinical_path, z_score_path)
-    # patient_id_list.remove('TCGA-QG-A5Z2')
-    # patient_id_list.remove('TCGA-3L-AA1B')
-    # patient_id_list.remove('TCGA-A6-2676')
+
     # number of patch too small (e.g., 1)
     patient_id_list.remove('TCGA-A6-2675')
     patient_id_list.remove('TCGA-5M-AAT5')
     patient_id_list.remove('TCGA-AA-3521')
     if params.omic_modal != 'miRNA':
         patient_id_list.remove('TCGA-AA-3558')
-    # patient_id_list.remove('TCGA-CM-4744')
-    # patient_id_list.remove('TCGA-AY-6197')
-    # patient_id_list.remove('TCGA-D5-6539')
-    # patient_id_list.remove('TCGA-G4-6306')
+
     patient_id_list = patient_id_list#[0:100]
     print('patient_id sample : {}'.format(patient_id_list[0]))
     print('Number of unique patient : {}'.format(len(patient_id_list)))
