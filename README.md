@@ -4,7 +4,7 @@ The official code of "Pathology-and-genomics Multimodal Transformer for Survival
 Our oral presentation session:
 ```
 Oral 2: Computational Pathology 
-Monday, October 9, 2023, 9:00 TP10:00 PST
+Monday, October 9, 2023, 9:00 to 10:00 PST
 Ballroom A - Parallel Hall
 ```
 Our poster presentation session:
