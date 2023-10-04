@@ -1,4 +1,4 @@
-# Pathology-and-genomics Multimodal Transformer for Survival Outcome Prediction
+# PathOmics: Pathology-and-genomics Multimodal Transformer for Survival Outcome Prediction
 The official code of "Pathology-and-genomics Multimodal Transformer for Survival Outcome Prediction" (Accepted to MICCAI2023, top14%).
 
 Our oral presentation session:
