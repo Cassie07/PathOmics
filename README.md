@@ -70,10 +70,12 @@ Please add `--less_data` into your script and set `--finetune_test_ratio` as you
 
 ## Citation
 ```
-@article{ding2023pathology,
+@inproceedings{ding2023pathology,
   title={Pathology-and-genomics multimodal transformer for survival outcome prediction},
   author={Ding, Kexin and Zhou, Mu and Metaxas, Dimitris N and Zhang, Shaoting},
-  journal={arXiv preprint arXiv:2307.11952},
-  year={2023}
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages={622--631},
+  year={2023},
+  organization={Springer}
 }
 ```
