@@ -13,7 +13,7 @@ Poster 4: Computer Aided Diagnosis and Treatment
 Tuesday, October 10, 2023, 13:00 to 14:00 PST
 Poster Hall
 ```
-<b> arXiv preprint version </b> [Link](http://arxiv.org/abs/2307.11952)
+<b> Paper </b> [[Link](https://link.springer.com/chapter/10.1007/978-3-031-43987-2_60)]
 
 ## Workflow overview of the PathOmics
 <p align="center">
