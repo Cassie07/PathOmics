@@ -1,18 +1,6 @@
 # PathOmics: Pathology-and-genomics Multimodal Transformer for Survival Outcome Prediction
-The official code of "Pathology-and-genomics Multimodal Transformer for Survival Outcome Prediction" (Accepted to MICCAI2023, top14%).
+The official code of "Pathology-and-genomics Multimodal Transformer for Survival Outcome Prediction" (Accepted to MICCAI2023, top 9%).
 
-Our oral presentation session:
-```
-Oral 2: Computational Pathology 
-Monday, October 9, 2023, 9:00 to 10:00 PST
-Ballroom A - Parallel Hall
-```
-Our poster presentation session:
-```
-Poster 4: Computer Aided Diagnosis and Treatment
-Tuesday, October 10, 2023, 13:00 to 14:00 PST
-Poster Hall
-```
 <b> Paper </b> [[Link](https://link.springer.com/chapter/10.1007/978-3-031-43987-2_60)]
 
 ## Workflow overview of the PathOmics
@@ -20,7 +8,19 @@ Poster Hall
   <img src="https://github.com/Cassie07/PathOmics/blob/main/Figures/Figure1.png" width="674.1" height="368.3" title="Figure1">
 </p>
 
-Workflow overview of the pathology-and-genomics multimodal transformer (PathOmics) for survival prediction. In (a), we show the pipeline of extracting image and genomics feature embedding via an unsupervised pretraining towards multimodal data fusion. In (b) and (c), our supervised finetuning scheme could flexibly handle mul- tiple types of data for prognostic prediction. With the multimodal pretrained model backbones, both multi- or single-modal data can be applicable for our model finetuning.
+Workflow overview of the pathology-and-genomics multimodal transformer (PathOmics) for survival prediction. In (a), we show the pipeline of extracting image and genomics feature embedding via an unsupervised pretraining towards multimodal data fusion. In (b) and (c), our supervised finetuning scheme could flexibly handle mul- tiple types of data for prognostic prediction. With the multimodal pretrained model backbones, both multi- or single-modal data can be applicable for our model fine-tuning.
+
+## Citation
+```
+@inproceedings{ding2023pathology,
+  title={Pathology-and-genomics multimodal transformer for survival outcome prediction},
+  author={Ding, Kexin and Zhou, Mu and Metaxas, Dimitris N and Zhang, Shaoting},
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages={622--631},
+  year={2023},
+  organization={Springer}
+}
+```
 
 ## Prerequisites
 ```
@@ -68,14 +68,3 @@ Please modify the code to ensure your pretrain weights saving directory is corre
 Please add `--less_data` into your script and set `--finetune_test_ratio` as your preferred ratio for indicating the ratio of data used for model finetuning.
 
 
-## Citation
-```
-@inproceedings{ding2023pathology,
-  title={Pathology-and-genomics multimodal transformer for survival outcome prediction},
-  author={Ding, Kexin and Zhou, Mu and Metaxas, Dimitris N and Zhang, Shaoting},
-  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
-  pages={622--631},
-  year={2023},
-  organization={Springer}
-}
-```
