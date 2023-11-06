@@ -4,7 +4,7 @@ The official code of "Pathology-and-genomics Multimodal Transformer for Survival
 
 <b> Paper </b> [[Link](https://link.springer.com/chapter/10.1007/978-3-031-43987-2_60)]
 
-### <b> [New Update!!!] We updated the paper list of pathology-and-genomics multimodal analysis approaches in healthcare at the end of this repo. <b>
+### <b> [New Update!!!] We updated the [paper list](https://github.com/Cassie07/PathOmics#literature-reviews-of-pathology-and-genomics-multimodal-analysis-approaches-in-healthcare) of pathology-and-genomics multimodal analysis approaches in healthcare at the end of this repo. <b>
 
 ## Workflow overview of the PathOmics
 <p align="center">
