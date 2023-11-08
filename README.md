@@ -11,7 +11,7 @@ The official code of "Pathology-and-genomics Multimodal Transformer for Survival
   <img src="https://github.com/Cassie07/PathOmics/blob/main/Figures/Figure1.png" width="674.1" height="368.3" title="Figure1">
 </p>
 
-Workflow overview of the pathology-and-genomics multimodal transformer (PathOmics) for survival prediction. In (a), we show the pipeline of extracting image and genomics feature embedding via an unsupervised pretraining towards multimodal data fusion. In (b) and (c), our supervised finetuning scheme could flexibly handle mul- tiple types of data for prognostic prediction. With the multimodal pretrained model backbones, both multi- or single-modal data can be applicable for our model fine-tuning.
+Workflow overview of the pathology-and-genomics multimodal transformer (PathOmics) for survival prediction. In (a), we show the pipeline of extracting image and genomics feature embedding via an unsupervised pretraining towards multimodal data fusion. In (b) and (c), our supervised finetuning scheme could flexibly handle multiple types of data for prognostic prediction. With the multimodal pretrained model backbones, both multi- or single-modal data can be applicable for our model fine-tuning.
 
 ## Citation
 ```
@@ -46,7 +46,7 @@ h5py 2.8.0
 * "coadread_tcga_pan_can_atlas_2018" in `bash_main.py` and `bash_main_read.py` is the downloaded folder, please download it before you run the code.
 3. Split WSIs into patches and only keep the foreground patches.
 4. Extract patch features via pretrained models (e.g., ImageNet-pretrained ResNet101).
-[For more details about extracting feature, please check the code in split_tiles_utils/helper.py]
+[For more details about extracting feature, please check https://github.com/Cassie07/PathOmics/issues/1 and the code in split_tiles_utils/helper.py]
 5. Save patch features as .npz files. (For each slide, we generate one .npz file to save patch features).
 ```
 
