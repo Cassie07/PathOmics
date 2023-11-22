@@ -2,7 +2,7 @@
 
 The official code of "Pathology-and-genomics Multimodal Transformer for Survival Outcome Prediction" (Accepted to MICCAI2023, top 9%).
 
-<b> Our Paper </b> [[Link](https://rdcu.be/dnwKf)]
+### <b> Our Paper </b> [[Link](https://rdcu.be/dnwKf)]
 
 ### <b> [New Update!!!] We updated the [paper list](https://github.com/Cassie07/PathOmics#literature-reviews-of-pathology-and-genomics-multimodal-analysis-approaches-in-healthcare) of pathology-and-genomics multimodal analysis approaches in healthcare at the end of this repo. </b>
 
@@ -11,7 +11,7 @@ The official code of "Pathology-and-genomics Multimodal Transformer for Survival
   <img src="https://github.com/Cassie07/PathOmics/blob/main/Figures/Figure1.png" width="674.1" height="368.3" title="Figure1">
 </p>
 
-Workflow overview of the pathology-and-genomics multimodal transformer (PathOmics) for survival prediction. In (a), we show the pipeline of extracting image and genomics feature embedding via an unsupervised pretraining towards multimodal data fusion. In (b) and (c), our supervised finetuning scheme could flexibly handle multiple types of data for prognostic prediction. With the multimodal pretrained model backbones, both multi- or single-modal data can be applicable for our model fine-tuning.
+<b> Workflow overview of the pathology-and-genomics multimodal transformer (PathOmics) for survival prediction. </b> In (a), we show the pipeline of extracting image and genomics feature embedding via an unsupervised pretraining towards multimodal data fusion. In (b) and (c), our supervised finetuning scheme could flexibly handle multiple types of data for prognostic prediction. With the multimodal pretrained model backbones, both multi- or single-modal data can be applicable for our model fine-tuning.
 
 ## Citation
 ```
