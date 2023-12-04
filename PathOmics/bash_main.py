@@ -228,7 +228,7 @@ def main():
 
         if params.less_data:
             finetune_train_idx = copy.deepcopy(train_idx)
-            random.seed(kfold_split_seed)
+            random.seed(params.kfold_split_seed)
             finetune_train_idx = list(finetune_train_idx)
             num_data = int(len(finetune_train_idx) * params.less_data_ratio)
             finetune_train_idx = random.sample(finetune_train_idx, k=num_data)
