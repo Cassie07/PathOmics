@@ -110,11 +110,11 @@ output: survival time, censorship, label
 def load_clinical(df_clinical, patient_id):
     
     df_patient = df_clinical[df_clinical.PATIENT_ID == patient_id[0:12]]
-    censorship = df_patient.PFS_STATUS.values[0]
+    censorship = df_patient.OS_STATUS.values[0]
     survival_event = df_patient.OS_MONTHS.values[0]
     label = df_patient.label.values[0]
     
-    return survival_event, 0 if censorship == '1:PROGRESSION' else 1, label
+    return survival_event, 0 if censorship == '1:DECEASED' else 1, label
 
 # clinical_path = 'coadread_tcga_pan_can_atlas_2018/data_clinical_patient_modified.csv'
 # df_clinical = pd.read_csv(clinical_path)
