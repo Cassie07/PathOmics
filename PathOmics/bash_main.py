@@ -193,7 +193,7 @@ def main():
     disc_labels: https://github.com/mahmoodlab/MCAT/blob/b9cca63be83c67de7f95308d54a58f80b78b0da1/datasets/dataset_survival.py
     '''
 
-    df_uncensored = df_clinical[df_clinical.PFS_STATUS == '1:PROGRESSION']
+    df_uncensored = df_clinical[df_clinical.OS_STATUS == '1:DECEASED'] 
     disc_labels, q_bins = pd.qcut(df_uncensored['OS_MONTHS'], q = params.n_bins, retbins=True, labels=False)
     q_bins[-1] = df_clinical['OS_MONTHS'].max() + params.eps
     q_bins[0] = df_clinical['OS_MONTHS'].min() - params.eps
