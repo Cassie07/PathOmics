@@ -4,7 +4,7 @@ The official code of "Pathology-and-genomics Multimodal Transformer for Survival
 
 ### <b> Our Paper </b> [[Link](https://rdcu.be/dnwKf)]
 
-### <b> [New Update!!!] We updated the [paper list](https://github.com/Cassie07/PathOmics#literature-reviews-of-pathology-and-genomics-multimodal-analysis-approaches-in-healthcare) of pathology-and-genomics multimodal analysis approaches in healthcare at the end of this repo. </b>
+### <b> [2025.03 New Update!!!] We updated the [paper list](https://github.com/Cassie07/PathOmics#literature-reviews-of-pathology-and-genomics-multimodal-analysis-approaches-in-healthcare) of pathology-and-genomics multimodal analysis approaches in healthcare at the end of this repo. </b>
 
 ## Workflow overview of the PathOmics
 <p align="center">
@@ -74,6 +74,15 @@ Please add `--less_data` into your script and set `--finetune_test_ratio` as you
 ## Literature reviews of pathology-and-genomics multimodal analysis approaches in healthcare.
 |Publish Date|Title|Paper Link|Code|
 |---|---|---|---|
+|2025.01|Histo-Genomic Knowledge Association For Cancer Prognosis From Histopathology Whole Slide Images|[TMI]([https://papers.miccai.org/miccai-2024/paper/2168_paper.pdf](https://ieeexplore.ieee.org/abstract/document/10830530))|[Code](https://github.com/ZacharyWang-007/G-HANet)|
+|2024.10|MoME: Mixture of Multimodal Experts for Cancer Survival Prediction|[MICCAI 2024](https://papers.miccai.org/miccai-2024/paper/2168_paper.pdf)|[Code](https://github.com/BearCleverProud/MoME)|
+|2024.10|PG-MLIF: Multimodal Low-rank Interaction Fusion Framework Integrating Pathological Images and Genomic Data for Cancer Prognosis Prediction|[MICCAI 2024](https://papers.miccai.org/miccai-2024/paper/1221_paper.pdf)|[Code](https://github.com/panxipeng/PG-MLIF)|
+|2024.10|Multimodal Cross-Task Interaction for Survival Analysis in Whole Slide Pathological Images|[MICCAI 2024](https://papers.miccai.org/miccai-2024/paper/1280_paper.pdf)|[Code](https://github.com/jsh0792/MCTI)|
+|2024.10|HistGen: Histopathology Report Generation via Local-Global Feature Encoding and Cross-modal Context Interaction|[MICCAI 2024](https://papers.miccai.org/miccai-2024/paper/0796_paper.pdf)|NA|
+|2024.07|A Multimodal Knowledge-enhanced Whole-slide Pathology Foundation Model|[ArXiv](https://arxiv.org/abs/2407.15362)|NA|
+|2024.06|Transcriptomics-guided Slide Representation Learning in Computational Pathology|[CVPR 2024](https://openaccess.thecvf.com/content/CVPR2024/html/Jaume_Transcriptomics-guided_Slide_Representation_Learning_in_Computational_Pathology_CVPR_2024_paper.html)|[Code](https://github.com/mahmoodlab/TANGLE)|
+|2024.06|Modeling Dense Multimodal Interactions Between Biological Pathways and Histology for Survival Prediction|[CVPR 2024](https://openaccess.thecvf.com/content/CVPR2024/papers/Jaume_Modeling_Dense_Multimodal_Interactions_Between_Biological_Pathways_and_Histology_for_CVPR_2024_paper.pdf)|[Code](https://github.com/mahmoodlab/SurvPath)|
+|2023.10|Multimodal Optimal Transport-based Co-Attention Transformer with Global Structure Consistency for Survival Prediction|[ICCV 2023](https://openaccess.thecvf.com/content/ICCV2023/papers/Xu_Multimodal_Optimal_Transport-based_Co-Attention_Transformer_with_Global_Structure_Consistency_for_ICCV_2023_paper.pdf)|[Code](https://github.com/Innse/MOTCat)|
 |2023.10|Pathology-and-genomics Multimodal Transformer for Survival Outcome Prediction|[MICCAI 2023](https://rdcu.be/dnwKf)|[Code](https://github.com/Cassie07/PathOmics)|
 |2023.10|Gene-induced Multimodal Pre-training for Image-omic Classification|[MICCAI 2023](https://link.springer.com/epdf/10.1007/978-3-031-43987-2_49?sharing_token=o-LUpRggl7nGR4-4H-Carve4RwlQNchNByi7wbcMAY7jxNo0bliUewITgRTD3ZK5Fj6WT7MCkvR1cQgUKw8y56vn3M_rNLfRgMpLN1Ln7rytbyfCglj7k-ImPaGGbBOVSA9qHdi0XnhwS27mLQ9ueSU11llzx5ZGz7eglf8kIjc%3D)|[Code](https://github.com/huangwudiduan/GIMP)|
 |2023.10|Cross-Modal Translation and Alignment for Survival Analysis|[ICCV 2023](https://openaccess.thecvf.com/content/ICCV2023/papers/Zhou_Cross-Modal_Translation_and_Alignment_for_Survival_Analysis_ICCV_2023_paper.pdf)|[Code](https://github.com/FT-ZHOU-ZZZ/CMTA)|
