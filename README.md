@@ -74,7 +74,7 @@ Please add `--less_data` into your script and set `--finetune_test_ratio` as you
 ## Literature reviews of pathology-and-genomics multimodal analysis approaches in healthcare.
 |Publish Date|Title|Paper Link|Code|
 |---|---|---|---|
-|2025.01|Histo-Genomic Knowledge Association For Cancer Prognosis From Histopathology Whole Slide Images|[TMI]([https://papers.miccai.org/miccai-2024/paper/2168_paper.pdf](https://ieeexplore.ieee.org/abstract/document/10830530))|[Code](https://github.com/ZacharyWang-007/G-HANet)|
+|2025.01|Histo-Genomic Knowledge Association For Cancer Prognosis From Histopathology Whole Slide Images|[TMI](https://ieeexplore.ieee.org/abstract/document/10830530)|[Code](https://github.com/ZacharyWang-007/G-HANet)|
 |2024.10|MoME: Mixture of Multimodal Experts for Cancer Survival Prediction|[MICCAI 2024](https://papers.miccai.org/miccai-2024/paper/2168_paper.pdf)|[Code](https://github.com/BearCleverProud/MoME)|
 |2024.10|PG-MLIF: Multimodal Low-rank Interaction Fusion Framework Integrating Pathological Images and Genomic Data for Cancer Prognosis Prediction|[MICCAI 2024](https://papers.miccai.org/miccai-2024/paper/1221_paper.pdf)|[Code](https://github.com/panxipeng/PG-MLIF)|
 |2024.10|Multimodal Cross-Task Interaction for Survival Analysis in Whole Slide Pathological Images|[MICCAI 2024](https://papers.miccai.org/miccai-2024/paper/1280_paper.pdf)|[Code](https://github.com/jsh0792/MCTI)|
