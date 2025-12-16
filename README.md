@@ -87,8 +87,11 @@ Please add `--less_data` into your script and set `--finetune_test_ratio` as you
 |2025.08|POMP: Pathology-omics Multimodal Pre-training Framework for Cancer Survival Prediction|[IJCAI2025](https://www.ijcai.org/proceedings/2025/0869.pdf)|[Code](https://github.com/SuixueWang/POMP)|
 |2025.06|Distilled Prompt Learning for Incomplete Multimodal Survival Prediction|[CVPR2025](https://arxiv.org/pdf/2503.01653)|[Code](https://github.com/Innse/DisPro)|
 |2025.06|Robust Multimodal Survival Prediction with Conditional Latent Differentiation Variational AutoEncoder|[CVPR2025](https://arxiv.org/pdf/2503.09496)|[Code](https://github.com/JJ-ZHOU-Code/RobustMultiModel)|
-|2025.04|Robust Multimodal Survival Prediction with Conditional Latent Differentiation Variational AutoEncoder|[ISBI2025](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10980817)|NA|
+|2025.06|A machine learning approach for multimodal data fusion for survival prediction in cancer patients|[NPJ Precision Oncology](https://www.nature.com/articles/s41698-025-00917-6)|[Code](https://github.com/kmhl548_azu/multimodal_pipeline)|
+|2025.04|Clustering-Enhanced Multimodal Pre-Training for Histology-Gene Joint Representation Learning|[ISBI2025](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10980817)|NA|
 |2025.04|Pathogen-X: A Cross-Modal Genomic Feature Trans-Align Network for Enhanced Survival Prediction from Histopathology Images|[ISBI2025](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10981028)|NA|
+|2025.01|Decoding pan-cancer treatment outcomes using multimodal real-world data and explainable artificial intelligence
+|[Nature Cancer](https://www.nature.com/articles/s43018-024-00891-1)|[Code](https://github.com/PhGK/DecodingCancer.)|
 |2025.01|Histo-Genomic Knowledge Association For Cancer Prognosis From Histopathology Whole Slide Images|[TMI](https://ieeexplore.ieee.org/abstract/document/10830530)|[Code](https://github.com/ZacharyWang-007/G-HANet)|
 |2024.10|MoME: Mixture of Multimodal Experts for Cancer Survival Prediction|[MICCAI 2024](https://papers.miccai.org/miccai-2024/paper/2168_paper.pdf)|[Code](https://github.com/BearCleverProud/MoME)|
 |2024.10|PG-MLIF: Multimodal Low-rank Interaction Fusion Framework Integrating Pathological Images and Genomic Data for Cancer Prognosis Prediction|[MICCAI 2024](https://papers.miccai.org/miccai-2024/paper/1221_paper.pdf)|[Code](https://github.com/panxipeng/PG-MLIF)|
