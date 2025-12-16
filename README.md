@@ -74,6 +74,10 @@ Please add `--less_data` into your script and set `--finetune_test_ratio` as you
 ## Literature reviews of pathology-and-genomics multimodal analysis approaches in healthcare.
 |Publish Date|Title|Paper Link|Code|
 |---|---|---|---|
+|2025.10|Multimodal Hypergraph Guide Learning for Non-Invasive ccRCC Survival Prediction|[MICCAI2025](https://papers.miccai.org/miccai-2025/paper/1586_paper.pdf)|[Code](https://github.com/iMoonLab/PAGHC)|
+|2025.10|Memory-Augmented Incomplete Multimodal Survival Prediction via Cross-Slide and Gene-Attentive Hypergraph Learning|[MICCAI2025](https://papers.miccai.org/miccai-2025/paper/2663_paper.pdf)|[Code](https://github.com/MCPathology/M2Surv)|
+|2025.10|Disentangled and Interpretable Multimodal Attention Fusion for Cancer Survival Prediction|[MICCAI2025](https://papers.miccai.org/miccai-2025/paper/4457_paper.pdf)|[Code](https://github.com/Trustworthy-AI-UU-NKI/DIMAF)|
+|2025.10|MurreNet: Modeling Holistic Multimodal Interactions Between Histopathology and Genomic Profiles for Survival Prediction|[MICCAI2025](https://papers.miccai.org/miccai-2025/paper/0057_paper.pdf)|NA|
 |2025.01|Histo-Genomic Knowledge Association For Cancer Prognosis From Histopathology Whole Slide Images|[TMI](https://ieeexplore.ieee.org/abstract/document/10830530)|[Code](https://github.com/ZacharyWang-007/G-HANet)|
 |2024.10|MoME: Mixture of Multimodal Experts for Cancer Survival Prediction|[MICCAI 2024](https://papers.miccai.org/miccai-2024/paper/2168_paper.pdf)|[Code](https://github.com/BearCleverProud/MoME)|
 |2024.10|PG-MLIF: Multimodal Low-rank Interaction Fusion Framework Integrating Pathological Images and Genomic Data for Cancer Prognosis Prediction|[MICCAI 2024](https://papers.miccai.org/miccai-2024/paper/1221_paper.pdf)|[Code](https://github.com/panxipeng/PG-MLIF)|
